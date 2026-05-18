@@ -132,6 +132,10 @@ app.use("/listings" , listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/" ,userRouter);
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 
 // for testing purpose
 // app.get ("/testListing" ,async(req,res)=>{
